@@ -1,6 +1,11 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 2.0.11
+* Fixed error with variation id for triggerExperiment for returning visitors 
+* Fixed when obtainFeatureVariable & obtainVariationAssociatedData throws wrong exception types
+* Adding URI encoding for CustomData & PageView
+
 ## 2.0.10
 * Improving SDK stability
 * Added VisitorCodeTooLong exception when exceeding the limit of 255 chars
