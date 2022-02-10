@@ -1,6 +1,10 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 2.0.14 - 2022-02-10
+* Added support of multi-environment for feature flags, Related to [`activateFeature`](https://developers.kameleoon.com/swift-sdk.html#activatefeature), [`obtainFeatureVariable`](https://developers.kameleoon.com/swift-sdk.html#obtainfeaturevariable)
+* Added checking for status of site (Enable / Disable). Related to [`activateFeature`](https://developers.kameleoon.com/swift-sdk.html#activatefeature), [`triggerExperiment`](https://developers.kameleoon.com/swift-sdk.html#triggerexperiment)
+
 ## 2.0.13 - 2021-12-10
 * Fixed issue with overlapping periods for scheduling. Related to [`activateFeature`](https://developers.kameleoon.com/swift-sdk.html#activatefeature)
 * Fixed issue with multiple adding CustomData with different values. Related to [`addData`](https://developers.kameleoon.com/swift-sdk.html#adddata)
