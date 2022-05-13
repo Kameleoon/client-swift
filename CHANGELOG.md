@@ -1,6 +1,10 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 2.1.0 - 2022-05-13
+* Added a new method [`updateConfigurationHandler`](https://developers.kameleoon.com/swift-sdk.html#updateconfigurationhandler) to handle events when configuration has updated data in real time.
+* Added update campaigns and feature flag configurations instantaneously with Real-Time Streaming Architecture: [`documentation`](https://developers.kameleoon.com/swift-sdk.html#streaming) or [`product updates`](https://www.kameleoon.com/en/blog/real-time-streaming)
+
 ## 2.0.15 - 2022-04-12
 * Added method for retrieving data from remote source: [`retrieveDataFromRemoteSource`](https://developers.kameleoon.com/swift-sdk.html#retrievedatafromremotesource)
 * Remove `Data` alias to `KameleoonData`. Related to [`addData`](https://developers.kameleoon.com/swift-sdk.html#adddata)
