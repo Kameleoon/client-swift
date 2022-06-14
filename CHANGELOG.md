@@ -1,6 +1,9 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 2.1.1 - 2022-06-14
+* Fixed issue when tracking data wasn't sent with [`activateFeature`](https://developers.kameleoon.com/swift-sdk.html#activatefeature), [`triggerExperiment`](https://developers.kameleoon.com/swift-sdk.html#triggerexperiment) methods.
+
 ## 2.1.0 - 2022-05-13
 * Added a new method [`updateConfigurationHandler`](https://developers.kameleoon.com/swift-sdk.html#updateconfigurationhandler) to handle events when configuration has updated data in real time.
 * Added update campaigns and feature flag configurations instantaneously with Real-Time Streaming Architecture: [`documentation`](https://developers.kameleoon.com/swift-sdk.html#streaming) or [`product updates`](https://www.kameleoon.com/en/blog/real-time-streaming)
