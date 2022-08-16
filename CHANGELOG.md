@@ -1,6 +1,15 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 2.1.2 - 2022-08-16
+* Added method to obtain a list of feature flags: [`obtainFeatureList`](https://developers.kameleoon.com/swift-sdk.html#obtainfeaturelist)
+* Added method to obtain a list of feature flags targeted for specified visitor code: [`obtainFeatureListForVisitorCode`](https://developers.kameleoon.com/swift-sdk.html#obtainfeaturelistforvisitorcode)
+* Added method to obtain a list of experiments: [`obtainExperimentList`](https://developers.kameleoon.com/swift-sdk.html#obtainexperimentlist)
+* Added method to obtain a list of experiments targeted for specified visitor code: [`obtainExperimentListForVisitorCode`](https://developers.kameleoon.com/swift-sdk.html#obtainexperimentlistforvisitorcode)
+* Added support for **Experiment** & **Exclusive Campaign** conditions. Related to [`triggerExperiment`](https://developers.kameleoon.com/swift-sdk.html#triggerexperiment)
+* Added KameleoonData [`Device`](https://developers.kameleoon.com/swift-sdk.html#device) data. Possible values are: **PHONE**, **TABLET**, **DESKTOP**. 
+* Removed KameleoonData `Interest`
+
 ## 2.1.1 - 2022-06-14
 * Fixed issue when tracking data wasn't sent with [`activateFeature`](https://developers.kameleoon.com/swift-sdk.html#activatefeature), [`triggerExperiment`](https://developers.kameleoon.com/swift-sdk.html#triggerexperiment) methods.
 
