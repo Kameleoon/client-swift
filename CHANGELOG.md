@@ -1,6 +1,10 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 2.1.3 - 2022-09-06
+* Added method to obtain all variables for feature flag: [`obtainFeatureAllVariables`](https://developers.kameleoon.com/swift-sdk.html#obtainfeatureallvariables)
+* Minor bug fixing
+
 ## 2.1.2 - 2022-08-16
 * Added method to obtain a list of feature flags: [`obtainFeatureList`](https://developers.kameleoon.com/swift-sdk.html#obtainfeaturelist)
 * Added method to obtain a list of feature flags targeted for specified visitor code: [`obtainFeatureListForVisitorCode`](https://developers.kameleoon.com/swift-sdk.html#obtainfeaturelistforvisitorcode)
