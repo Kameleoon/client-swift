@@ -2,6 +2,7 @@
 All notable changes to this project will be documented in this file.
 
 ## 3.0.0 - 2023-03-24
+* To enhance security, we have made it mandatory to include the **client_id** and **client_secret** fields in the Kameleoon configuration file. Alternatively, you can set these fields using the internal [`KameleoonClientConfig`](https://developers.kameleoon.com/ios-sdk.html#com-kameleoon-kameleoonclientfactory) instance. By requiring these fields, we aim to ensure that only authorized parties have access to Kameleoon and its associated resources.
 * Added support of new feature flag rules:
     - [`getFeatureVariationKey`](https://developers.kameleoon.com/ios-sdk.html#getFeatureVariationKey)
     - [`getFeatureVariable`](https://developers.kameleoon.com/ios-sdk.html#getFeatureVariable)
@@ -32,7 +33,7 @@ All notable changes to this project will be documented in this file.
 * Added method to obtain a list of experiments: [`obtainExperimentList`](https://developers.kameleoon.com/swift-sdk.html#obtainexperimentlist)
 * Added method to obtain a list of experiments targeted for specified visitor code: [`obtainExperimentListForVisitorCode`](https://developers.kameleoon.com/swift-sdk.html#obtainexperimentlistforvisitorcode)
 * Added support for **Experiment** & **Exclusive Campaign** conditions. Related to [`triggerExperiment`](https://developers.kameleoon.com/swift-sdk.html#triggerexperiment)
-* Added KameleoonData [`Device`](https://developers.kameleoon.com/swift-sdk.html#device) data. Possible values are: **PHONE**, **TABLET**, **DESKTOP**. 
+* Added KameleoonData [`Device`](https://developers.kameleoon.com/swift-sdk.html#device) data. Possible values are: **PHONE**, **TABLET**, **DESKTOP**.
 * Removed KameleoonData `Interest`
 
 ## 2.1.1 - 2022-06-14
@@ -59,7 +60,7 @@ All notable changes to this project will be documented in this file.
 * Fixed a issue with segment conditions, when only the first condition was taken into account and others are ignored. Also fixed issue when `is higher than` and `is lower than` had wrong result. Related to [`activateFeature`](https://developers.kameleoon.com/swift-sdk.html#activatefeature) and [`triggerExperiment`](https://developers.kameleoon.com/swift-sdk.html#triggerexperiment)
 
 ## 2.0.11 - 2021-08-31
-* Fixed error with variation id for triggerExperiment for returning visitors 
+* Fixed error with variation id for triggerExperiment for returning visitors
 * Fixed when obtainFeatureVariable & obtainVariationAssociatedData throws wrong exception types
 * Adding URI encoding for CustomData & PageView
 
@@ -74,7 +75,7 @@ All notable changes to this project will be documented in this file.
 * Fix ObtainFeatureVariable method. Now it returns boolean, string, number and JSON object
 
 ## 2.0.7 - 2021-06-17
-* Improving SDK stability 
+* Improving SDK stability
 
 ## 2.0.6 - 2021-06-07
 * Fix activateFeature issue
