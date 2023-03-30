@@ -14,7 +14,7 @@ let package = Package(
     targets: [
         .binaryTarget(
             name: "kameleoonClient",
-            url: "https://github.com/Kameleoon/client-swift/releases/download//kameleoon-client-swift-3.0.0.zip",
+            url: "https://github.com/Kameleoon/client-swift/releases/download/3.0.0/kameleoon-client-swift-3.0.0.zip",
             checksum: "2ab2a8f5052da6bd193197894799a64daa5df9938cb8ee0900f322734ff561e7"
         )
     ])
