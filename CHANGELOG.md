@@ -2,25 +2,25 @@
 All notable changes to this project will be documented in this file.
 
 ## 3.0.0 - 2023-03-24
-* To enhance security, we have made it mandatory to include the **client_id** and **client_secret** fields in the Kameleoon configuration file. Alternatively, you can set these fields using the internal [`KameleoonClientConfig`](https://developers.kameleoon.com/ios-sdk.html#com-kameleoon-kameleoonclientfactory) instance. By requiring these fields, we aim to ensure that only authorized parties have access to Kameleoon and its associated resources.
+* To enhance security, we have made it mandatory to include the **client_id** and **client_secret** fields in the Kameleoon configuration file. Alternatively, you can set these fields using the internal [`KameleoonClientConfig`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/ios-sdk/#additional-configuration) instance. By requiring these fields, we aim to ensure that only authorized parties have access to Kameleoon and its associated resources.
 * Added support of new feature flag rules:
-    - [`getFeatureVariationKey`](https://developers.kameleoon.com/ios-sdk.html#getFeatureVariationKey)
-    - [`getFeatureVariable`](https://developers.kameleoon.com/ios-sdk.html#getFeatureVariable)
-    - `activateFeature`-> [`isFeatureActive`](https://developers.kameleoon.com/go-sdk.html#isFeatureActive)
+    - [`getFeatureVariationKey`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/ios-sdk/#getfeaturevariationkey)
+    - [`getFeatureVariable`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/ios-sdk/#getfeaturevariable)
+    - `activateFeature`-> [`isFeatureActive`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/ios-sdk/#isfeatureactive)
 * Renaming of methods (old methods were removed)
-    - `obtainVariationAssociatedData` -> [`getVariationAssociatedData`](https://developers.kameleoon.com/ios-sdk.html#getVariationAssociatedData),
-    - `obtainFeatureAllVariables` -> [`getFeatureAllVariables`](https://developers.kameleoon.com/ios-sdk.html#getFeatureAllVariables),
-    - `obtainExperimentList` -> [`getExperimentList`](https://developers.kameleoon.com/ios-sdk.html#getExperimentList),
-    - `obtainFeatureList` -> [`getFeatureList`](https://developers.kameleoon.com/ios-sdk.html#getFeatureList), [`getActiveFeatureList`](https://developers.kameleoon.com/ios-sdk.html#getActiveFeatureList)
-    - `retrieveDataFromRemoteSource` -> [`getRemoteData`](https://developers.kameleoon.com/ios-sdk.html#getRemoteData),
+    - `obtainVariationAssociatedData` -> [`getVariationAssociatedData`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/ios-sdk/#getvariationassociateddata),
+    - `obtainFeatureAllVariables` -> [`getFeatureAllVariables`]https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/ios-sdk/#getfeatureallvariables),
+    - `obtainExperimentList` -> [`getExperimentList`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/ios-sdk/#getexperimentlist),
+    - `obtainFeatureList` -> [`getFeatureList`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/ios-sdk/#getfeaturelist), [`getActiveFeatureList`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/ios-sdk/#getactivefeaturelistforvisitor)
+    - `retrieveDataFromRemoteSource` -> [`getRemoteData`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/ios-sdk/#getremotedata),
 * Changes in returned errors:
     - `experimentConfigurationNotFound` -> `experimentNotFound`
     - `featureConfigurationNotFound` -> `featureFlagNotFound`
     - `notActivated` -> `notAllocated`
     - `variationConfigurationNotFound` -> `variationNotFound`
     - Added `variableNotFound`, `configurationInvalid`
-* Added **KameleoonClientConfig**, it can be used as parameter during initialization of a client. Related to [`KameleoonClientFactory.create`](https://developers.kameleoon.com/ios-sdk.html#com-kameleoon-kameleoonclientfactory)
-* Added possibility for [`CustomData`](https://developers.kameleoon.com/swift-sdk.html#customdata) to use variable argument list of values
+* Added **KameleoonClientConfig**, it can be used as parameter during initialization of a client. Related to [`KameleoonClientFactory.create`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/ios-sdk/#kameleoonclientfactory)
+* Added possibility for [`CustomData`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/ios-sdk/#customdata) to use variable argument list of values
 * Added support of `is among the values` operator for Custom Data
 
 ## 2.1.3 - 2022-09-06
