@@ -1,6 +1,9 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 3.0.1 - 2023-04-26
+* Minor bug fixing
+
 ## 3.0.0 - 2023-03-24
 * To enhance security, we have made it mandatory to include the **client_id** and **client_secret** fields in the Kameleoon configuration file. Alternatively, you can set these fields using the internal [`KameleoonClientConfig`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/ios-sdk/#additional-configuration) instance. By requiring these fields, we aim to ensure that only authorized parties have access to Kameleoon and its associated resources.
 * Added support of new feature flag rules:
