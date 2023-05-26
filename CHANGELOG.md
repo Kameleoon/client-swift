@@ -1,6 +1,9 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 3.0.2 - 2023-05-26
+* Minor improvements
+
 ## 3.0.1 - 2023-04-26
 * Minor bug fixing
 
