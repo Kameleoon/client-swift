@@ -1,6 +1,9 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 3.0.3 - 2023-06-08
+* Fixed an issue when SDK might not subscribe for real-time configuration updates
+
 ## 3.0.2 - 2023-05-26
 * Minor improvements
 
