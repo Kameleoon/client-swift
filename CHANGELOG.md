@@ -1,6 +1,13 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 3.0.5 - 2023-07-17
+* Added new conditions for targeting:
+    - Visitor Code
+    - SDK Language
+    - [Device](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/ios-sdk/#device)
+    - [Conversion](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/ios-sdk/#trackconversion)
+
 ## 3.0.4 - 2023-06-30
 * Improved initialization process: The SDK no longer requires an explicit request for the data configuration during initialization. In the event of a failure, the SDK automatically uses the configuration stored in the device’s cache, where available, to ensure seamless operation.
 * Improved the handling of internet connection loss for the [Real-Time Streaming Architecture](https://developers.kameleoon.com/feature-management-and-experimentation/technical-considerations/#streaming): We have resolved a critical issue related to the [Real-Time Streaming Architecture](https://developers.kameleoon.com/feature-management-and-experimentation/technical-considerations/#streaming). Previously, when the user’s device lost internet connection, the SDK was unable to receive configuration data until the next application launch. With this update, the SDK can now successfully retrieve the required configuration data once the connection is restored without restarting the application.
