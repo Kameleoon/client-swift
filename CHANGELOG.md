@@ -1,6 +1,10 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 3.0.6 - 2023-08-29
+### Features
+Changed the `KameleoonClientConfig` parameters `clientId` and `clientSecret` and the external configuration file parameters, `client_id` and `client_secret` from required to optional. This means you can now successfully initialize a configuration without providing credentials. Previously, you would receive a `credentialsNotFound` exception.
+
 ## 3.0.5 - 2023-07-17
 * Added new conditions for targeting:
     - Visitor Code
