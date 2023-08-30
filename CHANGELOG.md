@@ -9,8 +9,8 @@ All notable changes to this project will be documented in this file.
 * Added new conditions for targeting:
     - Visitor Code
     - SDK Language
-    - [Device](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/ios-sdk/#device)
-    - [Conversion](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/ios-sdk/#trackconversion)
+    - [Device](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/ios-sdk/#device)
+    - [Conversion](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/ios-sdk/#trackconversion)
 
 ## 3.0.4 - 2023-06-30
 * Improved initialization process: The SDK no longer requires an explicit request for the data configuration during initialization. In the event of a failure, the SDK automatically uses the configuration stored in the device’s cache, where available, to ensure seamless operation.
