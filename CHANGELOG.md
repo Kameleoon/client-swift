@@ -1,6 +1,60 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 4.0.0 - 2023-12-29
+### Breaking changes
+* The minimum supported iOS version has been increased to 12.0.
+* Removed the `visitorCode` parameter from all methods that accepted it. You must now specify the visitor code during initialization. As a result, a `KameleoonClient` instance only works for a single visitor:
+    - [`addData`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/ios-sdk/#adddata)
+    - [`flush`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/ios-sdk/#flush)
+    - [`isFeatureActive`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/ios-sdk/#isfeatureactive)
+    - [`getFeatureVariationKey`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/ios-sdk/#getfeaturevariationkey)
+    - [`getFeatureVariable`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/ios-sdk/#getfeaturevariable)
+    - [`trackConversion`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/ios-sdk/#trackconversion)
+    - [`getActiveFeatureList`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/ios-sdk/#getactivefeaturelist)
+    - [`getVisitorWarehouseAudience`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/ios-sdk/#getvisitorwarehouseaudience)
+* Removed all methods and errors related to **experiments**:
+  * Methods:
+    - `triggerExperiment`
+    - `getVariationAssociatedData`
+    - `getExperimentList`
+  * Error types:
+    - `experimentNotFound`
+    - `notTargeted`
+    - `notAllocated`
+    - `siteCodeDisabled`
+* Removed the `activateFeature` method that was deprecated in 3.x versions.
+* Changed the following classes, methods, fields and exceptions:
+    * Methods:
+        - Renamed `getFeatureAllVariables` to [`getFeatureVariationVariables`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/ios-sdk/#getfeaturevariationvariables).
+    * Fields:
+        - Renamed `value` to `values` in [`CustomData.init`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/ios-sdk/#customdata).
+        - Renamed `refreshIntervalMinutes` to `refreshIntervalMinute` in [`KameleoonClientConfig`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/ios-sdk/#initialize-the-kameleoon-client).
+        - Renamed `refresh_interval_minutes` to `refresh_interval_minute` in the [configuration](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/ios-sdk/#additional-configuration) file.
+        - Renamed `sitecode` to `siteCode` in [`KameleoonClientFactory.create`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/ios-sdk/#create)
+    * Exceptions:
+        - Removed `KameleoonError.credentialsNotFound` (`clientId` and `clientSecret` credentials are now optional).
+        - Renamed `KameleoonError.configurationInvalid` to `KameleoonError.dataFileInvalid`.
+        - Renamed `KameleoonError.visitorCodeNotValid` to `KameleoonError.visitorCodeInvalid`.
+        - Renamed `KameleoonError.featureFlagNotFound` to `KameleoonError.Feature.notFound`.
+        - Renamed `KameleoonError.variationNotFound` to `KameleoonError.Feature.variationNotFound`.
+        - Renamed `KameleoonError.variableNotFound` to `KameleoonError.Feature.variableNotFound`.
+* Added new exception `KameleoonError.Feature.environmentDisabled` indicating that the feature flag is disabled for certain environments. The following methods can throw the new exception:
+    - [`getFeatureVariationKey`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/ios-sdk/#getfeaturevariationkey)
+    - [`getFeatureVariable`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/ios-sdk/#getfeaturevariable)
+    - [`getFeatureVariationVariables`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/ios-sdk/#getfeaturevariationvariables)
+* Added new exception `KameleoonError.siteCodeIsEmpty` for method [`KameleoonClientFactory.create`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/ios-sdk/#create) indicating that the provided sitecode is empty.
+* Changed the data type of the `revenue` value from `Float` to `Double` in two methods:
+    - [`Conversion`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/ios-sdk/#conversion) init method
+    - [`trackConversion`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/ios-sdk/#trackconversion) method
+
+### Features
+* Added [`setLegalConsent`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/ios-sdk/#setlegalconsent) method to determine the types data Kameleoon includes in tracking requests. This helps you adhere to legal and regulatory requirements while responsibly managing visitor data. You can find more information in the [Consent management policy](https://help.kameleoon.com/consent-management-policy/).
+* [`KameleoonClientFactory.create`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/ios-sdk/#create) method accepts `visitorCode` as a parameter to use for all SDK methods. If you omit the `visitorCode`, the SDK generates a new visitor code value that it uses until you overwrite it. To overwrite a `visitorCode`, provide it as a parameter explicitly to the method. The method throws `KameleoonError.visitorCodeInvalid` if the provided `visitorCode` is invalid (empty or longer than 255 characters).
+* Added new configuration fields to [`KameleoonClientConfig`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/ios-sdk/#initialize-the-kameleoon-client) and external [configuration](https://developers.kameleoon.com/csharp-sdk.html#additional-configuration) file:
+    - `dataExpirationIntervalMinute` (`data_expiration_interval_minute`) specifies the time (in minutes) that the SDK retains the visitor's data on the device. By default, the TTL (time to live) is `Date.distantFuture`.
+    - `defaultTimeoutMillisecond` (`default_timeout_millisecond`) designates the predefined timeout for network requests.
+* Changed the `key` parameter in the [`getRemoteData`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/ios-sdk/#getremotedata) method from required to optional. If you don't provide a `key` parameter, the SDK uses the `visitorCode` specified during initialization.
 ## 3.1.0 - 2023-10-19
 ### Features
 * Added [`getVisitorWarehouseAudience`](https://developers.kameleoon.com/ios-sdk.html#getvisitorwarehouseaudience) method to retrieve all data associated with a visitor's warehouse audiences and adds it to the visitor.
