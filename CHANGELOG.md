@@ -3,7 +3,7 @@ All notable changes to this project will be documented in this file.
 
 ## 4.1.0 - 2024-01-17
 ### Features
-* [`addData`] method now accepts an array of `[KameleoonData]`. Variadic parameters are still supported.
+* [`addData`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/ios-sdk#adddata) method now accepts an array of `Array<KameleoonData>`. Variadic parameters are still supported.
 * Added method [`getRemoteVisitorData`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/ios-sdk/#getremotevisitordata) fetches the remote visitor's data (with an optional capability to add the data for the visitor):
 * Added a new parameter `completion` to some methods to replace the deprecated `completionHandler`. The `completion` parameter now represents the `Result` value. Methods with the `completion` parameter no longer throw errors directly. Instead, the `.failure` case contains information about issues that occurred during the request. The change is related to the following methods:
     - [`getVisitorWarehouseAudience(warehouseKey:customDataIndex:completion:)`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/ios-sdk/#getvisitorwarehouseaudience) instead of `getVisitorWarehouseAudience(warehouseKey:customDataIndex:completionHandler:)`
