@@ -1,6 +1,10 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 4.1.1 - 2024-02-02
+### Bug Fixes
+* Stability and performance improvements.
+
 ## 4.1.0 - 2024-01-17
 ### Features
 * [`addData`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/ios-sdk#adddata) method now accepts an array of `Array<KameleoonData>`. Variadic parameters are still supported.
