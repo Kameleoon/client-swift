@@ -1,6 +1,10 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 4.1.2 - 2024-02-16
+### Features
+* Added support for additional Data API servers across the world for even faster network requests.
+
 ## 4.1.1 - 2024-02-02
 ### Bug Fixes
 * Stability and performance improvements.
