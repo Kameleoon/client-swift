@@ -1,6 +1,10 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 4.1.3 - 2024-03-20
+### Bug Fixes
+* Fixed a critical issue that could lead to application crashes during startup.
+
 ## 4.1.2 - 2024-02-16
 ### Features
 * Added support for additional Data API servers across the world for even faster network requests.
