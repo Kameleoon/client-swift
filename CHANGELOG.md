@@ -1,6 +1,10 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 4.1.4 - 2024-04-17
+### Bug Fixes
+* Fixed and issue that hides fields of external `Types.Variation` class.
+
 ## 4.1.3 - 2024-03-20
 ### Bug Fixes
 * Fixed a critical issue that could lead to application crashes during startup.
