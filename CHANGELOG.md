@@ -3,7 +3,7 @@ All notable changes to this project will be documented in this file.
 
 ## 4.1.4 - 2024-04-17
 ### Bug Fixes
-* Fixed and issue that hides fields of external `Types.Variation` class.
+* Fixed an issue where fields of the external `Types.Variation` class were hidden.
 
 ## 4.1.3 - 2024-03-20
 ### Bug Fixes
