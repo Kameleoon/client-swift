@@ -1,6 +1,10 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 4.2.0 - 2024-04-22
+### Features
+* Added a privacy manifest file in accordance with the new [Apple privacy policy](https://developer.apple.com/documentation/bundleresources/privacy_manifest_files).
+
 ## 4.1.4 - 2024-04-17
 ### Bug Fixes
 * Fixed an issue where fields of the external `Types.Variation` class were hidden.
