@@ -1,6 +1,27 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 4.3.0 - 2024-05-22
+### Features
+* Added a new optional parameter `isUniqueIdentifier` (`is_unique_identifier`) that provides additional capabilities with [cross-device experimentation](https://developers.kameleoon.com/core-concepts/cross-device-experimentation) for the [`KameleoonClientConfig`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/ios-sdk/#create) and external [configuration](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/ios-sdk/#additional-configuration) file.
+* New targeting conditions are now available (some of them may require [`getRemoteVisitorData`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/ios-sdk#getremotevisitordata) pre-loaded data)
+  - Operating System
+  - IP Geolocation
+  - Kameleoon Segment
+  - Target Feature Flag
+  - Time since First Visit
+  - Time since Last Visit
+  - Number of Visits Today
+  - Total Number of Visits
+  - New or Returning Visitor
+* New Kameleoon Data types were introduced:
+  - [`Geolocation`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/ios-sdk#geolocation)
+* Changed parameters types for objects / methods:
+  - [`trackConversion`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/ios-sdk/#trackconversion): `revenue` changed from `Double?` to `Double`. Also, `revenue` is now optional.
+  - [`Conversion`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/ios-sdk/#conversion): `revenue` changed from `Double?` to `Double`, and `negative` changed from `Bool?` to `Bool`.
+### Bug Fixes
+* Stability and performance improvements.
+
 ## 4.2.0 - 2024-04-22
 ### Features
 * Added a privacy manifest file in accordance with the new [Apple privacy policy](https://developer.apple.com/documentation/bundleresources/privacy_manifest_files).
