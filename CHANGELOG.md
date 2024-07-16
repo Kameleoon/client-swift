@@ -1,6 +1,10 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 4.4.2 - 2024-07-16
+### Bug fixes
+* Resolved an issue where the [`isFeatureActive`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/ios-sdk/#isfeatureactive) method would return `false` instead of throwing `KameleoonError.sdkNotReady` or `KameleoonError.Feature.notFound` errors.
+
 ## 4.4.1 - 2024-07-15
 ### Bug Fixes
 * Stability and performance improvements.
