@@ -1,6 +1,10 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 4.4.3 - 2024-08-13
+### Features
+* Added the [`visitorCode`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/ios-sdk/#visitorcode) a computed property, which returns the unique visitor code used within `KameleoonClient`.
+
 ## 4.4.2 - 2024-07-16
 ### Bug fixes
 * Resolved an issue where the [`isFeatureActive`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/ios-sdk/#isfeatureactive) method would return `false` instead of throwing `KameleoonError.sdkNotReady` or `KameleoonError.Feature.notFound` errors.
