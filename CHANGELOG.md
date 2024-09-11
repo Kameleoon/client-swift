@@ -1,6 +1,20 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 4.5.0 - 2024-09-11
+### Features
+* Enhanced [logging](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/ios-sdk/#logging):
+    - Introduced [log levels](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/ios-sdk/#log-levels):
+        - `none`
+        - `error`
+        - `warning`
+        - `info`
+        - `debug`
+    - Added support for [custom logger](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/ios-sdk/#custom-handling-of-logs) implementations.
+* Enhanced tracking to consolidate multiple requests into a single one, combining visitor information and sending it once per interval.
+* Added a new variation of the [`flush(instant: Bool)`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/ios-sdk/#flush) with `instant` parameter. If the parameter's value is `true` the visitor's data is tracked instantly. Otherwise, the visitor's data will be tracked with next tracking interval. Default value of the parameter is `false`.
+* Added new configuration parameter `trackingIntervalMillisecond` (`tracking_interval_millisecond`) to [`KameleoonClientConfig`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/ios-sdk/#create) and the [configuration](https://developers.kameleoon.com/swift-sdk.html#additional-configuration) file, which is used to set interval for tracking requests. Default value is `1000` milliseconds.
+
 ## 4.4.3 - 2024-08-13
 ### Features
 * Added the [`visitorCode`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/ios-sdk/#visitorcode) a computed property, which returns the unique visitor code used within `KameleoonClient`.
