@@ -1,6 +1,10 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 4.6.1 - 2024-10-21
+### Bug Fixes
+* Stability and performance improvements.
+
 ## 4.6.0 - 2024-10-11
 ### Features
 * Introduced new evaluation methods for improved clarity and efficiency when working with the SDK:
