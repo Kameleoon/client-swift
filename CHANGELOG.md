@@ -1,6 +1,11 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 4.7.0 - 2024-11-14
+### Features
+* Introduced a new `visitorCode` parameter to [`RemoteVisitorDataFilter`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/ios-sdk#using-parameters-in-getremotevisitordata). This parameter determines whether to use the `visitorCode` from the most recent previous visit instead of the current `visitorCode`. When enabled, this feature allows visitor exposure to be based on the retrieved `visitorCode`, facilitating [cross-device reconciliation](https://developers.kameleoon.com/core-concepts/cross-device-experimentation/). Default value of the parameter is `true`.
+* Mapping identifier is now persistent, enabling the assigned variation for a visitor to be retained when [merging sessions](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/ios-sdk/#using-custom-data-for-session-merging) between anonymous and registered users.
+
 ## 4.6.1 - 2024-10-21
 ### Bug Fixes
 * Stability and performance improvements.
