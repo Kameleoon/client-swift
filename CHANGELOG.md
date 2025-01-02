@@ -14,8 +14,8 @@ All notable changes to this project will be documented in this file.
 ### Features
 * Introduced new evaluation methods for improved clarity and efficiency when working with the SDK:
   - [`getVariation`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/ios-sdk/#getvariation)
-  - [`getVariations`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/ios-sdk/#getvariations)
-These methods replace the deprecated ones:
+  - [`getVariations`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/ios-sdk/#getvariations)</br>
+* These methods replace the deprecated ones:
   - [`getFeatureVariationKey`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/ios-sdk#getfeaturevariationkey)
   - [`getFeatureVariable`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/ios-sdk#getfeaturevariable)
   - [`getActiveFeatures`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/ios-sdk#getactivefeatures)
