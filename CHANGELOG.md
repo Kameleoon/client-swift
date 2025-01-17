@@ -1,6 +1,15 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 4.8.0 - 2025-01-17
+### Features
+* Added the [`setForcedVariation()`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/ios-sdk#setforcedvariation) method. This method allows explicitly setting a forced variation for a visitor, which will be applied during experiment evaluation.
+*  Compression has been added to the [Conversions](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/ios-sdk/#conversion) list. This enhancement prevents unchecked growth and improves the speed of visitor synchronization with local storage.
+* The following targeting conditions are now supported:
+  - Exclusive Campaign
+  - Experiment
+  - Personalization
+
 ## 4.7.0 - 2024-11-14
 ### Features
 * Introduced a new `visitorCode` parameter to [`RemoteVisitorDataFilter`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/ios-sdk#using-parameters-in-getremotevisitordata). This parameter determines whether to use the `visitorCode` from the most recent previous visit instead of the current `visitorCode`. When enabled, this feature allows visitor exposure to be based on the retrieved `visitorCode`, facilitating [cross-device reconciliation](https://developers.kameleoon.com/core-concepts/cross-device-experimentation/). Default value of the parameter is `true`.
