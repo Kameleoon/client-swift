@@ -1,6 +1,14 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 4.10.0 - 2025-02-20
+### Features
+* Added asynchronous versions of methods as an addition to callback-based implementations, enabling easier invocation and error handling:
+    - [`runWhenReady`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/ios-sdk#runwhenready)
+    - [`getRemoteData`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/ios-sdk#getremotedata)
+    - [`getRemoteVisitorData`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/ios-sdk#getremotevisitordata)
+    - [`getVisitorWarehouseAudience`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/ios-sdk#getvisitorwarehouseaudience)
+
 ## 4.9.0 - 2025-02-10
 ### Features
 * Added SDK support for **holdout experiments**. Visitors assigned to a holdout experiment are excluded from all other rollouts and experiments, and consistently receive the default variation. For visitors not in a holdout experiment, the standard evaluation process applies, allowing them to be evaluated for all feature flags as usual. Platform-wide release expected in February 2025.
