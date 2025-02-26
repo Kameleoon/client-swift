@@ -1,6 +1,10 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 4.11.0 - 2025-02-26
+### Features
+* Added SDK support for **Mutually Exclusive Groups**. When feature flags are grouped into a **Mutually Exclusive Group**, only one flag in the group will be evaluated at a time. All other flags in the group will automatically return their default variation.
+
 ## 4.10.0 - 2025-02-20
 ### Features
 * Added asynchronous versions of methods as an addition to callback-based implementations, enabling easier invocation and error handling:
