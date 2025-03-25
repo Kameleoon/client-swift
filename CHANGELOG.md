@@ -1,6 +1,10 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 4.13.1 - 2025-03-25
+### Bug Fixes
+* Stability and performance improvements.
+
 ## 4.13.0 - 2025-03-24
 ### Features
 * Added new optional parameters `negative` and `metadata` to the [`trackConversion`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/ios-sdk#trackconversion) method.
