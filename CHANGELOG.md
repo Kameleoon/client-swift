@@ -1,6 +1,10 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 4.13.2 - 2025-04-02
+### Bug Fixes
+* Stability and performance improvements.
+
 ## 4.13.1 - 2025-03-25
 ### Bug Fixes
 * Stability and performance improvements.
