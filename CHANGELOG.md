@@ -1,6 +1,10 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 4.13.3 - 2025-04-08
+### Bug Fixes
+* Changed the order in which **conversion** and **experiment** events are sent. This may lead to more accurate **visit**-level experiment reporting.
+
 ## 4.13.2 - 2025-04-02
 ### Bug Fixes
 * Stability and performance improvements.
