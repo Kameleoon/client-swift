@@ -1,6 +1,10 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 4.13.4 - 2025-04-17
+### Bug Fixes
+* Fixed an issue in [`CustomLogger`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/ios-sdk/#custom-handling-of-logs) where the `log` function always returned `.error` as the log level instead of the actual value.
+
 ## 4.13.3 - 2025-04-08
 ### Bug Fixes
 * Changed the order in which **conversion** and **experiment** events are sent. This may lead to more accurate **visit**-level experiment reporting.
