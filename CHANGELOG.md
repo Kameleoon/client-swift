@@ -1,6 +1,17 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 4.14.0 - 2025-05-26
+### Features
+* Added automatic detection of the [`Device`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/ios-sdk#device) type for targeting and reporting purposes. However, it can still be manually overridden using the [`addData`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/ios-sdk#addData) method.
+* Added support for a **New**/**Returning** visitor breakdown filter in reports.
+* Refactored targeting condition logic (remote data requests are now optional) for:
+  - Time elapsed since first/last visit
+  - New or returning visitors
+  - Total number of visits
+  - Number of visits today
+* Added support for **304 (Not Modified)** responses from the SDK config service to avoid redundant updates and reduce traffic when the configuration hasn't changed.
+
 ## 4.13.4 - 2025-04-17
 ### Bug Fixes
 * Fixed an issue in [`CustomLogger`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/ios-sdk/#custom-handling-of-logs) where the `log` function always received `.error` as the log `level` parameter instead of the actual value.
