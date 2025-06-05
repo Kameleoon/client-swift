@@ -1,6 +1,10 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 4.14.1 - 2025-06-05
+### Bug fixes
+* Fixed an issue where, due to race conditions, the [`runWhenReady`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/ios-sdk#runwhenready) callback could be called twice if the timeout occurred close to the initialization time.
+
 ## 4.14.0 - 2025-05-26
 ### Features
 * Added automatic detection of the [`Device`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/ios-sdk#device) type for targeting and reporting purposes. However, it can still be manually overridden using the [`addData`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/ios-sdk#addData) method.
