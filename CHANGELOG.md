@@ -1,6 +1,10 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 4.15.0 - 2025-06-27
+### Features
+* Added support for using a Custom Data value for traffic bucketing instead of the default visitor code. [Learn More](https://help.kameleoon.com/create-feature-flag/#Advanced_Flag_Settings). [Learn More](https://help.kameleoon.com/create-feature-flag/#Advanced_Flag_Settings).
+
 ## 4.14.1 - 2025-06-05
 ### Bug fixes
 * Fixed an issue where, due to race conditions, the [`runWhenReady`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/ios-sdk#runwhenready) callback could be called twice if the timeout occurred close to the initialization time.
