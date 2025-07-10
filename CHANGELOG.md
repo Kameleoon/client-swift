@@ -4,7 +4,7 @@ All notable changes to this project will be documented in this file.
 
 ## 4.16.0 - 2025-07-10
 ### Features
-Introducing a fallback configuration mechanism via the [`default_datafile`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/ios-sdk/#additional-configuration) parameter. If no cached configuration is available, the SDK immediately uses the provided default. For version control, the SDK prioritizes the default configuration if its `dateModified` timestamp is more recent than the cached version.
+* Introducing a fallback configuration mechanism via the [`default_datafile`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/ios-sdk/#additional-configuration) parameter. If no cached configuration is available, the SDK immediately uses the provided default. For version control, the SDK prioritizes the default configuration if its `dateModified` timestamp is more recent than the cached version.
 
 ## 4.15.0 - 2025-06-27
 ### Features
