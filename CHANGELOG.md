@@ -3,7 +3,7 @@ All notable changes to this project will be documented in this file.
 
 ## 4.17.0 - 2025-07-23
 ### Features
-* Added the [`evaluateAudiences`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/csharp-sdk#evaluateaudiences) method. This method iterates over all Audiences Explorer segments, evaluates each one, and tracks the segments for which the visitor is targeted using the [`TARGETINGSEGMENT`](https://developers.kameleoon.com/apis/data-api-rest/all-endpoints/post-visit-events/) event.
+* Added the [`evaluateAudiences`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/ios-sdk#evaluateaudiences) method. This method iterates over all Audiences Explorer segments, evaluates each one, and tracks the segments for which the visitor is targeted using the [`TARGETINGSEGMENT`](https://developers.kameleoon.com/apis/data-api-rest/all-endpoints/post-visit-events/) event.
 
 
 ## 4.16.0 - 2025-07-10
