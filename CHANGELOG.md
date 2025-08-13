@@ -1,6 +1,13 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 4.18.0 - 2025-08-13
+> If you are upgrading from a version prior to 4.18.0, note that variables with integer values should now be cast to `Int` instead of `Double`, as was done previously.
+### Features
+* Introduced the new [`getDataFile`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/ios-sdk#getdatafile) method. This method returns the current SDK configuration (also known as the **data file**) used for evaluation and targeting. It is **not** intended for production use to fetch variations for every feature flag in the returned list, as it is not optimized for performance. For that purpose, use [`getVariations`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/ios-sdk/#getvariations) instead. `getDataFile` is mainly useful for debugging or QA, for example to let internal users manually select a variant for a specific feature flag in production.
+### Bug fixes
+* Fixed handling of integer variables in variations. Previously, all numeric values were cast to `Double`. Now, variables with integer values are correctly cast to `Int`.
+
 ## 4.17.0 - 2025-07-23
 ### Features
 * Added the [`evaluateAudiences`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/ios-sdk#evaluateaudiences) method. This method iterates over all Audiences Explorer segments, evaluates each one, and tracks the segments for which the visitor is targeted using the [`TARGETINGSEGMENT`](https://developers.kameleoon.com/apis/data-api-rest/all-endpoints/post-visit-events/) event.
