@@ -1,6 +1,20 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 4.19.0 - 2025-08-20
+> [!WARNING]
+> If you are upgrading from a version prior to 4.18.0, note that variables with integer values should now be cast to `Int` instead of `Double`, as was done previously.
+### Features
+* Added a new property **`environmentEnabled`** to [`FeatureFlag`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/ios-sdk/#featureflag), indicating whether the feature flag is enabled in the current environment.
+* Added a new property **`name`** to [`Variation`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/ios-sdk/#variation), representing the name of the variation.
+### Bug fixes
+* Fixed visibility issue. The following structs were mistakenly declared as `public` and are now internal:
+  - [`DataFile`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/ios-sdk/#datafile)
+  - [`FeatureFlag`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/ios-sdk/#featureflag)
+  - [`Variation`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/ios-sdk/#variation)
+  - [`Variable`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/ios-sdk/#variable)
+
+
 ## 4.18.0 - 2025-08-13
 > [!WARNING]
 > If you are upgrading from a version prior to 4.18.0, note that variables with integer values should now be cast to `Int` instead of `Double`, as was done previously.
