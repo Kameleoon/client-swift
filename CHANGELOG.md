@@ -1,6 +1,14 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 4.21.0 - 2025-09-09
+> [!WARNING]
+> If you are upgrading from a version prior to 4.18.0, note that variables with integer values should now be cast to `Int` instead of `Double`, as was done previously.
+### Features
+* Added a new properties `defaultVariationKey` and `defaultVariation` to [`FeatureFlag`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/ios-sdk/#featureflag). The method returns information about the default variation associated with the feature flag.
+* Added a new property `rules` of type [`[Types.Rule]`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/ios-sdk/#rule) to [`FeatureFlag`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/ios-sdk/#featureflag), which defines the targeting rules associated with the feature flag.
+
+
 ## 4.20.0 - 2025-08-29
 > [!WARNING]
 > If you are upgrading from a version prior to 4.18.0, note that variables with integer values should now be cast to `Int` instead of `Double`, as was done previously.
