@@ -1,6 +1,12 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 4.21.1 - 2025-10-23
+> [!WARNING]
+> If you are upgrading from a version prior to 4.18.0, note that variables with integer values should now be cast to `Int` instead of `Double`, as was done previously.
+### Bug fixes
+* Fixed an issue where [`Conversion`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/ios-sdk#conversion) metadata initialized with a name was not tracked.
+
 ## 4.21.0 - 2025-09-09
 > [!WARNING]
 > If you are upgrading from a version prior to 4.18.0, note that variables with integer values should now be cast to `Int` instead of `Double`, as was done previously.
