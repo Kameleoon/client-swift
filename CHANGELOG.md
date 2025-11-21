@@ -1,6 +1,16 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 4.22.0 - 2025-11-21
+> [!WARNING]
+> If you are upgrading from a version prior to 4.18.0, note that variables with integer values should now be cast to `Int` instead of `Double`, as was done previously.
+### Features
+* Updated evaluation and tracking logic to comply with GDPR requirements when consent is not given:
+    - If behavior is **partially blocked**, the default variation will be returned.
+    - If behavior is **completely blocked**, an exception will be thrown.
+### Bug fixes
+* Fixed an issue where **legal consent** could reset to `false` when it wasn’t explicitly set prior to calling the evaluation method.
+
 ## 4.21.1 - 2025-10-23
 > [!WARNING]
 > If you are upgrading from a version prior to 4.18.0, note that variables with integer values should now be cast to `Int` instead of `Double`, as was done previously.
