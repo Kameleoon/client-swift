@@ -1,6 +1,12 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 4.22.1 - 2025-12-15
+> [!WARNING]
+> If you are upgrading from a version prior to 4.18.0, note that variables with integer values should now be cast to `Int` instead of `Double`, as was done previously.
+### Bug fixes
+* Fixed an issue where the iOS SDK was incorrectly classified as the **Android** operating system on the results page and in exported reports.
+
 ## 4.22.0 - 2025-11-21
 > [!WARNING]
 > If you are upgrading from a version prior to 4.18.0, note that variables with integer values should now be cast to `Int` instead of `Double`, as was done previously.
